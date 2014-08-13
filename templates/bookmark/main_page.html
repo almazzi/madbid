@@ -1,0 +1,14 @@
+{% extends 'bookmark/base.html' %}
+
+{% block title %}{% endblock %}
+{% block head %}{% endblock %}
+{% block content %}
+{% if user.username %}
+<p class="welcome_p">Welcome <span class="username">{{ user.username }}!</span>
+Here you can store and share bookmarks!</p>
+{% else %}
+<p>Welcome anonymous user!
+You need to <a href="/django_bookmarks/login/">login</a>
+before you can store and share bookmarks.</p>
+{% endif %}
+{% endblock %}
